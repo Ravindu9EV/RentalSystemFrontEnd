@@ -1,12 +1,11 @@
 import { Component } from '@angular/core';
+import { NavbarComponent } from '../common/navbar/navbar.component';
 
 @Component({
   selector: 'app-rental-detail',
   standalone: true,
-  imports: [],
+  imports: [NavbarComponent],
   templateUrl: './rental-detail.component.html',
-  styleUrl: './rental-detail.component.css'
+  styleUrl: './rental-detail.component.css',
 })
-export class RentalDetailComponent {
-
-}
+export class RentalDetailComponent {}

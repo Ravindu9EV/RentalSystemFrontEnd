@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { RouterLink, RouterOutlet } from '@angular/router';
 import { HardwareItemComponent } from './pages/hardware-item/hardware-item.component';
 import { HomePageComponent } from './pages/home-page/home-page.component';
 import { RentalComponent } from './pages/rental/rental.component';
@@ -16,6 +16,7 @@ import { NavbarComponent } from './common/navbar/navbar.component';
     RentalComponent,
     RentalDetailComponent,
     NavbarComponent,
+    RouterLink,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',

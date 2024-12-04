@@ -1,32 +1,45 @@
-<app-navbar></app-navbar>
-<div class="itemPart">
-  <div class="col-12">
-    <label for="username" class="form-label">Username</label>
-    <div class="input-group has-validation">
-      <span class="input-group-text"></span>
-      <input
-        type="text"
-        class="form-control"
-        id="username"
-        placeholder="Username"
-        required
-      />
-      <div class="invalid-feedback">Your username is required.</div>
-    </div>
+<!-- <app-navbar></app-navbar> -->
+<div class="form">
+  <div class="mb-3">
+    <label for="itemId" class="form-label">Item ID</label>
+    <input type="text" class="form-control" id="itemId" placeholder="1001" />
   </div>
-
-  <div class="col-12">
-    <label for="email" class="form-label"
-      >Email <span class="text-body-secondary">(Optional)</span></label
-    >
+  <div class="mb-3">
+    <label for="name" class="form-label">Name</label>
+    <input type="text" class="form-control" id="name" placeholder="1001" />
+  </div>
+  <div class="mb-3">
+    <label for="rentalPerDay" class="form-label">Rental Per Day</label>
     <input
-      type="email"
+      type="date"
       class="form-control"
-      id="email"
-      placeholder="you@example.com"
+      id="rentalPerDay"
+      placeholder="1001"
     />
-    <div class="invalid-feedback">
-      Please enter a valid email address for shipping updates.
-    </div>
   </div>
+  <div class="mb-3">
+    <label for="finePerDay" class="form-label">Fine Per Day</label>
+    <input
+      type="date"
+      class="form-control"
+      id="finePerDay"
+      placeholder="1001"
+    />
+  </div>
+  <div class="mb-3">
+    <label for="availability" class="form-label">Availability</label>
+    <input
+      type="date"
+      class="form-control"
+      id="availability"
+      placeholder="1001"
+    />
+  </div>
+</div>
+
+<div class="row">
+  <button>Add</button>
+  <button>Update</button>
+  <button>Delete</button>
+  <button>Search</button>
 </div>
