@@ -1,21 +1,37 @@
-export class Item{
-    private  rentID:number;
-    private  rentalDate;
-    private returnDate:string;
-    private dueDate:string ;
-    private fine:boolean ;
-    private  totalCost:DoubleRange;
-    private rentDetails: Array<Object>;
+export class Item {
+  private rentID: number;
+  private name: string;
+  private rentalPerDay: number;
+  private finePerDay: number;
+  private availability: boolean;
 
-    constructor(rentID:number,rentalDate:string,returnDate:string, dueDate:string,fine:boolean,totalCost:DoubleRange,rentDetails: Array<Object>){
-        this.rentID=rentID,
-        this.rentalDate=rentalDate,
-        this.returnDate=returnDate,
-        this.dueDate=dueDate,
-        this.fine=fine,
-        this.totalCost=totalCost,
-        this.rentDetails=rentDetails
-    }
+  constructor(
+    rentID: number,
+    name: string,
+    rentalPerDay: number,
+    finePerDay: number,
+    availability: boolean
+  ) {
+    this.rentID = rentID;
+    this.name = name;
+    this.rentalPerDay = rentalPerDay;
+    this.finePerDay = finePerDay;
+    this.availability = availability;
+  }
 
-    public void 
+  public getRentID(): number {
+    return this.rentID;
+  }
+  public getName(): string {
+    return this.name;
+  }
+  public getrentalPerDay(): number {
+    return this.rentalPerDay;
+  }
+  public getFinePerDay(): number {
+    return this.finePerDay;
+  }
+  public getAvailaility(): boolean {
+    return this.availability;
+  }
 }
