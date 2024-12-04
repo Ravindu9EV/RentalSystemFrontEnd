@@ -14,19 +14,21 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './hardware-item.component.css',
 })
 export class HardwareItemComponent {
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) {
+    this.getItems();
+  }
 
-  public items = [];
-  public item = {
-    rentID: 0,
-    name: '',
-    rentalPerDay: 0,
-    aavailability: false,
-  };
+  public items: any = [];
+  // public item = {
+  //   ID: 0,
+  //   name: '',
+  //   rentalPerDay: 0,
+  //   aavailability: false,
+  // };
   //public item:Object={}
   addItem() {
     this.http
-      .post('http://localhost:8080/rental/save', this.item)
+      .post('http://localhost:8080/item/save', this.item)
       .subscribe((data) => {
         if (data) {
           alert('item seved!');
@@ -36,7 +38,7 @@ export class HardwareItemComponent {
   }
 
   getItems() {
-    this.http.get('http://localhost:8080/rental/get-all').subscribe((data) => {
+    this.http.get('http://localhost:8080/item/get-all').subscribe((data) => {
       console.log(data);
     });
   }

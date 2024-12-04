@@ -1,26 +1,26 @@
 export class Item {
-  private rentID: number;
+  private itemID: number;
   private name: string;
   private rentalPerDay: number;
   private finePerDay: number;
   private availability: boolean;
 
   constructor(
-    rentID: number,
+    itemID: number,
     name: string,
     rentalPerDay: number,
     finePerDay: number,
     availability: boolean
   ) {
-    this.rentID = rentID;
+    this.itemID = itemID;
     this.name = name;
     this.rentalPerDay = rentalPerDay;
     this.finePerDay = finePerDay;
     this.availability = availability;
   }
 
-  public getRentID(): number {
-    return this.rentID;
+  public getItemID(): number {
+    return this.itemID;
   }
   public getName(): string {
     return this.name;
